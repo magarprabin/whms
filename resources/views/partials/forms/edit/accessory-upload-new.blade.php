@@ -1,0 +1,17 @@
+image_html += '<div class="form-group imag">';
+                image_html += '<label class="col-md-3 control-label" for="image">{{ trans('general.image_upload') }}</label>';
+                image_html += '<div class="col-md-9">';
+                image_html += '<input type="file" id="image" name="image[' + x + ']" aria-label="image" class="sr-only">';
+                image_html += '<label class="btn btn-default" aria-hidden="true">';
+                image_html += '{{ trans('button.select_file')  }}';
+                image_html += '<input type="file" name="image[' + x + ']" class="js-uploadFile" id="uploadFile2" data-maxsize="{{ \App\Helpers\Helper::file_upload_max_size() }}" accept="image/gif,image/jpeg,image/webp,image/png,image/svg,image/svg+xml" style="display:none; max-width: 90%" aria-label="image" aria-hidden="true">';
+                image_html += '</label>';
+                image_html += '<span class="label label-default" id="uploadFile-info"></span>';
+                image_html += '<p class="help-block" id="uploadFile-status">{{ trans('general.image_filetypes_help', ['size' => \App\Helpers\Helper::file_upload_max_size_readable()]) }}</p>';
+                image_html += `{!! $errors->first('image', '<span class="alert-msg" aria-hidden="true">:message</span>') !!}`;
+                image_html += '</div>';
+                image_html += '<div class="col-md-4 col-md-offset-3" aria-hidden="true">';
+                image_html += '<img id="uploadFile2-imagePreview" style="max-width: 200px; display: none;" alt="Uploaded image thumbnail">';
+                image_html += '</div>';
+                image_html += '</div>';
+                $(image_field).append(image_html);

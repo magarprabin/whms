@@ -1,0 +1,261 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+th {
+  background-color: #3c8dbc70;
+}
+
+.box-1-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+#riders,
+.riders,
+#vehicles,
+.vehicles {
+  margin: 10px;
+  padding: 3px 6px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #9ec5dc54;
+  border-radius: 5px;
+}
+
+.pickup-details label {
+  width: 100px;
+}
+
+.pickup-details input {
+  outline-color: #3c8dbc70;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.border-vendor {
+  border: 2px solid #3c8dbc8d;
+  margin: 20px;
+  padding: 20px;
+  background: #fff9;
+}
+
+.vr label {
+  min-width: 90px;
+}
+
+span#name {
+  font-weight: 500;
+}
+
+input.bb_pod {
+  border: none;
+  background: no-repeat;
+}
+
+/* Print POD Style starts from here */
+
+.topflex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirmation {
+  display: flex;
+  margin: 0 20px;
+  line-height: 15px;
+  justify-content: space-between;
+}
+
+.poid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-flex td {
+  min-width: 300px;
+}
+
+.main-content .hr {
+  border: 1px dashed black;
+  margin: 10px 0 80px 0;
+}
+
+.main-content .poid label {
+  margin-bottom: unset;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#myCheckbox {
+  transform: scale(1.5);
+}
+
+#td-200 {
+  max-width: 200px;
+}
+
+.print-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+  right: 0;
+}
+
+svg.bi.bi-printer.printpod {
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+}
+
+.buttonflex {
+  display: flex;
+  justify-content: right;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-2 label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-content {
+  margin: 20px;
+}
+
+.main-content table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main-content td,
+.main-content th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.main-content tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.main-content th {
+  background-color: #3c8dbc70;
+}
+
+.vendor-wrap {
+  border: 1px solid #245926b0;
+  margin-bottom: 15px;
+}
+
+.table-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  line-height: 12px;
+}
+
+.table-flex * {
+  background: none !important;
+}
+
+.total {
+  display: flex;
+  justify-content: space-around;
+  line-height: 30px;
+}
+
+td#width3 {
+  width: 7%;
+}
+
+.three-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: justify;
+}
+
+.myRadio{
+  transform: scale(1.5);
+}
+
+@media print {
+  .main-content .barcode {
+    display: inline-block;
+    page-break-inside: avoid;
+  }
+
+  .main-content .barcode>div {
+    background-color: black !important;
+  }
+
+  .buttonflex {
+    display: none !important;
+  }
+
+  .main-content .print-button {
+    display: none;
+  }
+
+  @page {
+    margin: 40px;
+  }
+
+  .main-content td,
+  .main-content th {
+    font-size: 10px;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .page-divider {
+    display: block;
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    display: none;
+  }
+
+  .table-flex td {
+    min-width: 200px;
+  }
+
+  .hr {
+    display: none;
+  }
+  
+  td#width3 {
+    width: 3%;
+  }
+}
